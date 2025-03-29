@@ -1,6 +1,6 @@
-Welcome to your new TanStack app! 
+# Welcome to your new TanStack app
 
-# Getting Started
+## Getting Started
 
 To run this application:
 
@@ -9,7 +9,7 @@ bun install
 bun run start  
 ```
 
-# Building For Production
+## Building For Production
 
 To build this application for production:
 
@@ -17,7 +17,7 @@ To build this application for production:
 bun run build
 ```
 
-## Testing
+### Testing
 
 This project uses [Vitest](https://vitest.dev/) for testing. You can run the tests with:
 
@@ -25,15 +25,13 @@ This project uses [Vitest](https://vitest.dev/) for testing. You can run the tes
 bun run test
 ```
 
-## Styling
+### Styling
 
 This project uses [Tailwind CSS](https://tailwindcss.com/) for styling.
 
-
-## Linting & Formatting
+### Linting & Formatting
 
 This project uses [Biome](https://biomejs.dev/) for linting and formatting. The following scripts are available:
-
 
 ```bash
 bun run lint
@@ -41,8 +39,7 @@ bun run format
 bun run check
 ```
 
-
-## Shadcn
+### Shadcn
 
 Add components using the latest version of [Shadcn](https://ui.shadcn.com/).
 
@@ -50,25 +47,23 @@ Add components using the latest version of [Shadcn](https://ui.shadcn.com/).
 pnpx shadcn@latest add button
 ```
 
-
-## Setting up Netlify
+### Setting up Netlify
 
 First install the Netlify CLI with:
 
 ```bash
-npm install -g netlify-cli`
+npm install -g netlify-cli
 ```
 
 ```bash
 netlify init
 ```
 
+### Routing
 
-
-## Routing
 This project uses [TanStack Router](https://tanstack.com/router). The initial setup is a code based router. Which means that the routes are defined in code (in the `./src/main.tsx` file). If you like you can also use a file based routing setup by following the [File Based Routing](https://tanstack.com/router/latest/docs/framework/react/guide/file-based-routing) guide.
 
-### Adding A Route
+#### Adding A Route
 
 To add a new route to your application just add another `createRoute` call to the `./src/main.tsx` file. The example below adds a new `/about`route to the root route.
 
@@ -106,7 +101,7 @@ For more information on the options you have when you are creating code based ro
 
 Now that you have two routes you can use a `Link` component to navigate between them.
 
-### Adding Links
+#### Adding Links
 
 To use SPA (Single Page Application) navigation you will need to import the `Link` component from `@tanstack/react-router`.
 
@@ -124,8 +119,7 @@ This will create a link that will navigate to the `/about` route.
 
 More information on the `Link` component can be found in the [Link documentation](https://tanstack.com/router/v1/docs/framework/react/api/router/linkComponent).
 
-### Using A Layout
-
+#### Using A Layout
 
 Layouts can be used to wrap the contents of the routes in menus, headers, footers, etc.
 
@@ -167,8 +161,7 @@ The `<TanStackRouterDevtools />` component is not required so you can remove it 
 
 More information on layouts can be found in the [Layouts documentation](https://tanstack.com/router/latest/docs/framework/react/guide/routing-concepts#layouts).
 
-
-### Migrating To File Base Routing
+#### Migrating To File Base Routing
 
 First you need to add the Vite plugin for Tanstack Router:
 
@@ -317,7 +310,7 @@ Now you've got a file based routing setup in your project! Let's have some fun w
 
 You can find out everything you need to know on how to use file based routing in the [File Based Routing](https://tanstack.com/router/latest/docs/framework/react/guide/file-based-routing) documentation.
 
-## Data Fetching
+### Data Fetching
 
 There are multiple ways to fetch data in your application. You can use TanStack Query to fetch data from a server. But you can also use the `loader` functionality built into TanStack Router to load the data for a route before it's rendered.
 
@@ -350,7 +343,7 @@ const peopleRoute = createRoute({
 
 Loaders simplify your data fetching logic dramatically. Check out more information in the [Loader documentation](https://tanstack.com/router/latest/docs/framework/react/guide/data-loading#loader-parameters).
 
-### React-Query
+#### React-Query
 
 React-Query is an excellent addition or alternative to route loading and integrating it into you application is a breeze.
 
@@ -431,7 +424,7 @@ export default App;
 
 You can find out everything you need to know on how to use React-Query in the [React-Query documentation](https://tanstack.com/query/latest/docs/framework/react/overview).
 
-## State Management
+### State Management
 
 Another common requirement for React applications is state management. There are many options for state management in React. TanStack Store provides a great starting point for your project.
 
@@ -454,7 +447,7 @@ function App() {
   const count = useStore(countStore);
   return (
     <div>
-      <button onClick={() => countStore.setState((n) => n + 1)}>
+      <button type="button" onClick={() => countStore.setState((n) => n + 1)}>
         Increment - {count}
       </button>
     </div>
@@ -487,7 +480,7 @@ function App() {
 
   return (
     <div>
-      <button onClick={() => countStore.setState((n) => n + 1)}>
+      <button type="button" onClick={() => countStore.setState((n) => n + 1)}>
         Increment - {count}
       </button>
       <div>Doubled - {doubledCount}</div>
@@ -504,10 +497,10 @@ Once we've created the derived store we can use it in the `App` component just l
 
 You can find out everything you need to know on how to use TanStack Store in the [TanStack Store documentation](https://tanstack.com/store/latest).
 
-# Demo files
+## Demo files
 
 Files prefixed with `demo` can be safely deleted. They are there to provide a starting point for you to play around with the features you've installed.
 
-# Learn More
+## Learn More
 
 You can learn more about all of the offerings from TanStack in the [TanStack documentation](https://tanstack.com).
