@@ -12,16 +12,16 @@ import DemoStore from "./routes/demo.store";
 import DemoTable from "./routes/demo.table";
 import DemoTanstackQuery from "./routes/demo.tanstack-query";
 
-import Header from "./components/Header";
 
 import TanstackQueryLayout from "./integrations/tanstack-query/layout";
 
 import * as TanstackQuery from "./integrations/tanstack-query/root-provider";
 
 import "./styles.css";
-import reportWebVitals from "./reportWebVitals.ts";
+import reportWebVitals from "./reportWebVitals";
 
-import App from "./App.tsx";
+import App from "./App";
+import Header from "./components/header";
 
 const rootRoute = createRootRoute({
 	component: () => (
